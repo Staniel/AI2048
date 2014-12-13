@@ -9,9 +9,9 @@ class ComputerAI(BaseAI):
 	
 	def getMove(self, grid):
 		# I'm too naive, please change me!
-		depth = 0
-		bestmove = (None, sys.maxint)
-		while depth < 3:
+		# depth = 0
+		# bestmove = (None, sys.maxint)
+		# while depth < 3:
 			#print "depth is "+str(depth)
 		# 	beta = self.minmove(depth,(None, -1), (None, sys.maxint), grid)
 		# 	if beta[0] == None:
