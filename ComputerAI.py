@@ -13,16 +13,16 @@ class ComputerAI(BaseAI):
 		bestmove = (None, sys.maxint)
 		while depth < 3:
 			#print "depth is "+str(depth)
-			beta = self.minmove(depth,(None, -1), (None, sys.maxint), grid)
-			if beta[0] == None:
-				break;
-			if bestmove[1] > beta[1]:
-				bestmove = beta
-			depth = depth + 1
-		return bestmove[0]
+		# 	beta = self.minmove(depth,(None, -1), (None, sys.maxint), grid)
+		# 	if beta[0] == None:
+		# 		break;
+		# 	if bestmove[1] > beta[1]:
+		# 		bestmove = beta
+		# 	depth = depth + 1
+		# return bestmove[0]
 		# I’m too simple, please change me!
-		# cells = grid.getAvailableCells()
-		# return cells[randint(0, len(cells) - 1)] if cells else None
+		cells = grid.getAvailableCells()
+		return cells[randint(0, len(cells) - 1)] if cells else None
 	def maxmove(self, depth, alpha, beta, grid):
 		moves = grid.getAvailableMoves()
 		for move in moves:
